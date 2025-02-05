@@ -19,7 +19,7 @@ async def send_email(to_email: str, subject: str, body: str, file_path: str):
     try:
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
-            server.login('i.stojic02@gmail.com', 'zlvgwjgiscdvihdv')
+            server.login('i.stojic02@gmail.com', '')
             server.sendmail(msg['From'], msg['To'], msg.as_string())
     except Exception as e:
         print(f"Error sending email: {e}")
